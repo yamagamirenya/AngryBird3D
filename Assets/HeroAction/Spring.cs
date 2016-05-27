@@ -8,7 +8,7 @@ public class Spring : MonoBehaviour
     private Vector3 currentPosition;
     private Vector3 screenPoint;
     private Vector3 offset;
-    private float x_first, y_first;
+    private float x_first, y_first,z_first;
     public int k;
 
     GameObject MainCamera;
@@ -18,6 +18,7 @@ public class Spring : MonoBehaviour
     {
         x_first = transform.position.x;
         y_first = transform.position.y;
+
     }
 
     void OnMouseDown()
@@ -36,8 +37,14 @@ public class Spring : MonoBehaviour
     void OnMouseUp()
     {
         Vector3 to = new Vector3(x_first - transform.position.x, y_first - transform.position.y, 0);
+        print(x_first);
+        print(y_first);
+
+        print(transform.position.x);
+        print(transform.position.y);
         float z = to.magnitude;
-        this.GetComponent<Rigidbody>().AddForce(-to * z * k);
+        this.GetComponent<Rigidbody>().AddForce(to * z * k);
+        Destroy(GameObject.Find("Wall"));
     }
 
    // public float Norm(float x, float y)

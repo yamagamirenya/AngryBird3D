@@ -45,9 +45,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CreateObject.cs" />
-     <Compile Include="Assets\MakeRamiel.cs" />
-     <Compile Include="Assets\Spring.cs" />
+     <Compile Include="Assets\HeroAction\SeeHero.cs" />
+     <Compile Include="Assets\HeroAction\Spring.cs" />
+     <Compile Include="Assets\MakeStage\CreateObject.cs" />
+     <Compile Include="Assets\MakeStage\MakeRamiel.cs" />
+     <Compile Include="Assets\Score\GetScore.cs" />
+     <Compile Include="Assets\omake\Taihou.cs" />
+     <Compile Include="Assets\scean\SceanChange\FinishToStart.cs" />
+     <Compile Include="Assets\scean\SceanChange\GameToFinish.cs" />
+     <Compile Include="Assets\scean\SceanChange\StartToGame.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
